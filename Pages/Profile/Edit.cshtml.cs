@@ -65,7 +65,7 @@ namespace lab3.Pages_Profile
                 }
             }
 
-            return RedirectToPage("./Index");
+            return RedirectToPage("./Details");
         }
 
         private bool LabUserExists(uint id)

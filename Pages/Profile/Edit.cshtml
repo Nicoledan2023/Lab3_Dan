@@ -29,6 +29,11 @@
                 <input asp-for="LabUser.Password" class="form-control" />
                 <span asp-validation-for="LabUser.Password" class="text-danger"></span>
             </div>
+             <div class="form-group">
+                <label asp-for="LabUser.PasswordVerify" class="control-label"></label>
+                <input asp-for="LabUser.PasswordVerify" class="form-control" />
+                <span asp-validation-for="LabUser.PasswordVerify" class="text-danger"></span>
+            </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
             </div>
