@@ -1,7 +1,14 @@
+using Lab3.Models;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
+
+var dbmsVersion = new MariaDbServerVersion(builder.Configuration.GetValue<string>("MariaDbVersion"));
+var connectionString = builder.Configuration.GetConnectionString("Lab3Db");
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+builder.Services.AddDbContext<Lab3Context>(opt => opt.UseMySql(connectionString, dbmsVersion));
 
 var app = builder.Build();
 
